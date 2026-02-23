@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --color-primary: #0056D2;
+  --color-primary-hover: #00419e;
+  --color-primary-light: #E6F0FF;
+  --color-secondary: #382d8b;
+  
+  --color-background: #FFFFFF;
+  --color-surface: #F5F7F8;
+  --color-surface-hover: #F0F4F8;
+  
+  --color-text-primary: #1F1F1F;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94A3B8;
+  
+  --color-border: #E1E1E1;
+  --color-border-light: #F1F5F9;
+  --color-border-dark: #CBD5E1;
+
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+
+  --color-link: #0056D2;
+  --color-dashboard-heading: #2A2C2E;
+  --color-section-heading: #0F1745;
+  --color-card-title: #0F102F;
+  --color-card-provider: #5B6993;
+  --color-rating: #0663D6;
+  --color-card-meta: #636363;
+  --color-card-border: #E3E6EF;
+  --color-skeleton-bg: #E5E7EB;
+  --color-skeleton-alt: #F3F4F6;
+  --color-badge-purple-bg: #EDE9FE;
+  --color-badge-purple-text: #6D28D9;
+  --color-badge-purple-border: #E9D5FF;
+  --color-status-success-dark: #1E7F43;
+  
+  --color-star: #f5c22b;
+  --color-star-muted: #dadce0;
+
+  --color-link-alt: #2a73cc;
+  --color-card-border-alt: #e4e7ef;
+  --color-hero-bg: #f0f6ff;
+  --color-career-bg: #f2f6fd;
+  --color-hero-heading-dark: #29181f;
+  --color-hero-subheading: #141225;
+  --color-hero-text: #131018;
+  --color-career-heading: #371019;
+  --color-hero-accent: #8b3d3d;
+  --color-career-border: #e6e9ef;
+
+  --radius-lg: 8px;
+
+  --shadow-card: 0 1px 2px rgba(16,24,40,0.05), 0 1px 3px rgba(16,24,40,0.06);
+  --shadow-soft: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-raised: 0 2px 8px rgba(0,0,0,0.12);
+  --shadow-testimonial: 0 0 0 1px rgba(228, 231, 239, 0.6);
+
+  --color-course-hero-heading: #202225;
+  --color-course-border-subtle: #e0e0e0;
+  --color-course-tab-inactive: #201114;
+  --color-course-skill-muted: #0E1B29;
+  --color-course-testimonial-quote: #676A86;
+  --shadow-course-card-lg: 0 4px 32px rgba(0,0,0,0.08);
+
+  --color-checkout-text-muted: #373a3c;
+  --color-checkout-badge-bg: #D1F2EB;
+  --color-checkout-badge-text: #005342;
+  --color-checkout-logo-muted: #AFAFAF;
+  --color-checkout-copyright: #0E1013;
+  --color-checkout-reserved: #0E104B;
+  --color-checkout-border-input: #8c8c8c;
+  --color-checkout-text-input: #555;
+  --color-checkout-border-card: #e7e7e7;
+  --color-checkout-text-info: #5f6368;
+
+  --color-certificate-banner-bg: #E3EEFF;
+  --color-certificate-skeleton-alt: #d6dbe8;
+  --color-certificate-border-subtle: #e8eaed;
+  --color-certificate-skill-bg: #f1f3f4;
+  --color-certificate-frame-border: #B3B3B5;
+  --color-certificate-avatar-bg: #9e27b0;
+  --color-certificate-badge-border: #dadce0;
+  --color-certificate-star: #f5c22b;
+  --color-certificate-check: #008332;
+  --color-certificate-text-muted: #5f6368;
+
+  --color-mylearning-success: #187541;
+  --color-mylearning-icon-muted: #ccc;
+  --color-mylearning-text-muted: #5f6368;
+  --color-mylearning-star: #f5c22b;
+  --color-mylearning-border-muted: #dadce0;
+
+  --color-updates-text-muted: #5f6368;
+  --color-updates-text-message: #373a3c;
+
+  --color-account-bg: #F2F5FA;
+  --color-account-sidebar-active: #5f33e1;
+  --color-account-text-dark: #1A1317;
+  --color-account-border-input: #ced4da;
+  --color-account-bg-muted: #F0F4F9;
+  --color-account-text-gray: #495057;
+  --color-account-text-navy: #0E1549;
+  --color-account-error: #C02626;
+
+  --color-accomplishments-text-secondary: #4c5a8a;
+  --color-accomplishments-btn-bg: #0A5BD3;
+  --color-accomplishments-btn-hover: #0a52c2;
+  --color-accomplishments-accent-surface: #e9f1ff;
+  --color-accomplishments-dark-surface: #2f3a4a;
+  --color-accomplishments-provider-text: #5B6993;
+  --color-accomplishments-title-text: #0F102F;
+  --color-accomplishments-label-muted: #636363;
+
+  --color-learn-active-bg: #e8f0fe;
+  --color-learn-success-bg-light: #e6f4ea;
+  --color-learn-error-bg-light: #fce8e6;
+  --color-learn-status-success: #1f8354;
+  --color-learn-status-error: #d93025;
+  --color-learn-status-success-vibrant: #00A86B;
+  --color-learn-status-error-vibrant: #D32F2F;
+  --color-brand-dark-blue: #00255d;
+  --color-learn-timeline-bg: #f2f8ff;
+  --color-learn-timeline-border: #d4e4f7;
+  --color-learn-coach-bg: #f0f4f9;
+
+  /* Profile Specific Tokens */
+  --color-profile-heading-navy: #121A37;
+  --color-profile-text-navy: #0E164E;
+  --color-profile-link-blue: #155ED3;
+  --color-profile-action-link: #0459D5;
+  --color-profile-highlight-title: #0F1014;
+  --color-profile-helper-text: #5F6A8B;
+  --color-profile-btn-blue: #0661D6;
+  --color-profile-section-title: #1D161A;
+  --color-profile-subheading: #1A181F;
+  --color-profile-card-bg: #F3F6FB;
+  --color-profile-muted-text: #62688A;
+  --color-profile-vibrant-link: #046BD9;
+  --color-profile-border-muted: #e1e6f0;
+  --color-profile-date-text: #8A90A8;
+  --color-profile-modal-border: #dfe3eb;
+  --color-profile-modal-divider: #eef1f5;
+  --color-profile-modal-label: #3f4b6b;
+  --color-profile-input-border: #d4dae6;
+  /* Search & Badge Specific Tokens */
+  --color-badge-popular: #981B61;
+  --color-badge-neutral: #C7C7C7;
+  --color-brand-blue: #1A73E8;
+  
+  --color-social-facebook: #1877F2;
+
+  /* Status Badge Tokens */
+  --color-badge-success-bg: #ECFDF5;
+  --color-badge-success-text: #047857;
+  --color-badge-success-border: #D1FAE5;
+  
+  --color-badge-warning-bg: #FFFBEB;
+  --color-badge-warning-text: #B45309;
+  --color-badge-warning-border: #FEF3C7;
+
+  --color-help-banner-bg: #F0F4F9;
+}
+
+:root {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #E5E7EB;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #D1D5DB;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
