@@ -130,7 +130,6 @@
   --color-learn-timeline-border: #d4e4f7;
   --color-learn-coach-bg: #f0f4f9;
 
-  /* Profile Specific Tokens */
   --color-profile-heading-navy: #121A37;
   --color-profile-text-navy: #0E164E;
   --color-profile-link-blue: #155ED3;
@@ -149,14 +148,11 @@
   --color-profile-modal-divider: #eef1f5;
   --color-profile-modal-label: #3f4b6b;
   --color-profile-input-border: #d4dae6;
-  /* Search & Badge Specific Tokens */
   --color-badge-popular: #981B61;
   --color-badge-neutral: #C7C7C7;
   --color-brand-blue: #1A73E8;
-  
   --color-social-facebook: #1877F2;
 
-  /* Status Badge Tokens */
   --color-badge-success-bg: #ECFDF5;
   --color-badge-success-text: #047857;
   --color-badge-success-border: #D1FAE5;
@@ -186,7 +182,6 @@ body {
   font-feature-settings: "kern" 1, "liga" 1;
 }
 
-/* Custom scrollbar for webkit */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

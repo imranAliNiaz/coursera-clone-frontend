@@ -19,7 +19,6 @@ const CourseCarousel: React.FC<Props> = ({ title, recommendations }) => {
             key={item.id}
             className="group cursor-pointer flex flex-col h-full bg-white hover:shadow-lg transition-shadow rounded-lg overflow-hidden border border-transparent hover:border-border"
           >
-            {/* Image */}
             <div className="aspect-video w-full overflow-hidden bg-gray-100 relative">
               <img
                 src={item.image}
@@ -28,7 +27,6 @@ const CourseCarousel: React.FC<Props> = ({ title, recommendations }) => {
               />
             </div>
 
-            {/* Content */}
             <div className="p-4 flex flex-col flex-1">
               <div className="flex items-center gap-2 mb-2">
                 <img

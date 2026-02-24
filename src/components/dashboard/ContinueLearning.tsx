@@ -8,7 +8,6 @@ interface ContinueLearningProps {
 }
 
 const ContinueLearning: React.FC<ContinueLearningProps> = ({ enrollments }) => {
-  // Filter for in-progress enrollments (not completed)
   const inProgressEnrollments = enrollments.filter((e) => !e.completed);
   const currentEnrollment = inProgressEnrollments[0];
 
@@ -18,13 +17,11 @@ const ContinueLearning: React.FC<ContinueLearningProps> = ({ enrollments }) => {
 
   return (
     <div className="flex flex-col gap-6">
-      {/* Continue Learning Header */}
       <div>
         <h2 className="text-[20px] font-medium text-dashboard-heading mb-6">
           Continue your learning
         </h2>
 
-        {/* Course Logo & Title */}
         <div className="flex items-center gap-2 mb-4">
           <img
             src={IMAGES.LOGOS.GOOGLE_WORDMARK}
@@ -36,7 +33,6 @@ const ContinueLearning: React.FC<ContinueLearningProps> = ({ enrollments }) => {
           </span>
         </div>
 
-        {/* Module Progress Card */}
         <div className="border border-card-border rounded-[12px] p-6 mb-8 bg-white shadow-soft">
           <div className="flex items-start gap-4">
             <div className="w-8 h-8 rounded-full bg-success flex items-center justify-center shrink-0">
@@ -74,7 +70,6 @@ const ContinueLearning: React.FC<ContinueLearningProps> = ({ enrollments }) => {
         </div>
       </div>
 
-      {/* Need Help Banner */}
       <div className="bg-help-banner-bg rounded-[8px] p-2 flex items-center justify-between gap-4">
         <div className="flex items-center gap-4">
           <div className="w-10 h-10 shrink-0">

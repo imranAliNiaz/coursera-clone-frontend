@@ -1,30 +1,6 @@
 import React from "react";
 import LessonList from "./LessonList";
-
-interface Lesson {
-  id: string;
-  title: string;
-  type: "VIDEO" | "READING" | "ASSESSMENT";
-  order: number;
-  updatedAt?: string;
-}
-
-interface Module {
-  id: string;
-  title: string;
-  order: number;
-  lessons: Lesson[];
-}
-
-interface ModuleListProps {
-  modules: Module[];
-  onEditModule: (module: Module) => void;
-  onDeleteModule: (moduleId: string) => void;
-  onAddLesson: (moduleId: string) => void;
-  onEditLesson: (lesson: Lesson) => void;
-  onDeleteLesson: (lessonId: string) => void;
-  onReorderLessons: (moduleId: string, lessons: Lesson[]) => void;
-}
+import type { ModuleListProps } from "../../types/instructor";
 
 const ModuleList: React.FC<ModuleListProps> = ({
   modules,

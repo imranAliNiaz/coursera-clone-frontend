@@ -8,7 +8,6 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ course }) => {
   return (
     <div className="space-y-8 sticky top-[120px]">
-      {/* Taught by */}
       <div className="bg-white rounded-[8px] border border-gray-100 p-6 shadow-sm">
         <h3 className="text-[14px] font-bold text-gray-500 uppercase tracking-wider mb-4">
           Taught by
@@ -41,7 +40,6 @@ const Sidebar: React.FC<SidebarProps> = ({ course }) => {
         </p>
       </div>
 
-      {/* Offered by */}
       <div className="bg-white rounded-[8px] border border-gray-100 p-6 shadow-sm">
         <h3 className="text-[14px] font-bold text-gray-500 uppercase tracking-wider mb-4">
           Offered by

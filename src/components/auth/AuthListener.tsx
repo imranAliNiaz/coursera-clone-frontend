@@ -8,7 +8,6 @@ import type { User } from "@supabase/supabase-js";
 
 const AuthListener: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
-  // No currentUser needed here anymore for handleSync logic
 
   useEffect(() => {
     let mounted = true;
@@ -47,7 +46,6 @@ const AuthListener: React.FC = () => {
       }
     };
 
-    // 1. Initial Check on mount - always silent
     const checkInitialSession = async () => {
       const {
         data: { session },
@@ -59,14 +57,11 @@ const AuthListener: React.FC = () => {
 
     checkInitialSession();
 
-    // 2. Listen for changes
     const { data: authListener } = supabase.auth.onAuthStateChange(
       async (event, session) => {
         if (!mounted) return;
 
         if (event === "SIGNED_IN" && session?.user) {
-          // Only show toast if we don't already have a valid user in localStorage
-          // This prevents duplicate toasts on mount/refresh
           const hasStoredUser = !!localStorage.getItem("user");
           handleSync(session.user, !hasStoredUser);
         } else if (event === "USER_UPDATED" && session?.user) {

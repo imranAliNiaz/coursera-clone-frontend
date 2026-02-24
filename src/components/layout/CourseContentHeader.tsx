@@ -23,9 +23,7 @@ const CourseContentHeader: React.FC = () => {
   return (
     <header className="bg-white border-b border-border h-[64px] flex items-center sticky top-0 z-50 font-sans shadow-sm">
       <div className="w-full px-4 flex items-center justify-between">
-        {/* ================= LEFT SECTION ================= */}
         <div className="flex items-center gap-4 shrink-0">
-          {/* Logo */}
           <Link to="/" className="flex items-center no-underline">
             <img
               src={IMAGES.LOGO}
@@ -34,10 +32,8 @@ const CourseContentHeader: React.FC = () => {
             />
           </Link>
 
-          {/* Separator */}
           <div className="h-[24px] w-[1px] bg-mylearning-border-muted mx-1"></div>
 
-          {/* Partner Name/Logo */}
           <div className="flex items-center">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
@@ -47,9 +43,7 @@ const CourseContentHeader: React.FC = () => {
           </div>
         </div>
 
-        {/* ================= RIGHT SECTION ================= */}
         <div className="flex items-center gap-5 shrink-0">
-          {/* Globe Icon */}
           <button className="text-text-secondary hover:text-text-primary bg-transparent border-none cursor-pointer p-1">
             <svg
               width="20"
@@ -67,7 +61,6 @@ const CourseContentHeader: React.FC = () => {
             </svg>
           </button>
 
-          {/* Owl/Assistant Icon (Placeholder) */}
           <button className="w-8 h-8 rounded-full bg-learn-active-bg flex items-center justify-center text-primary border-none cursor-pointer">
             <svg
               className="w-5 h-5"
@@ -81,7 +74,6 @@ const CourseContentHeader: React.FC = () => {
             </svg>
           </button>
 
-          {/* Profile Circle */}
           <div className="relative">
             <button
               onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}

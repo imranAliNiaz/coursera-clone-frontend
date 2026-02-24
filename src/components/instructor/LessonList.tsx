@@ -1,20 +1,5 @@
 import React from "react";
-
-interface Lesson {
-  id: string;
-  title: string;
-  type: "VIDEO" | "READING" | "ASSESSMENT";
-  order: number;
-  updatedAt?: string;
-}
-
-interface LessonListProps {
-  lessons: Lesson[];
-  moduleId: string; // Keep this in interface if passed by parent, even if unused in component (or remove if strict)
-  onEdit: (lesson: Lesson) => void;
-  onDelete: (lessonId: string) => void;
-  onReorder: (moduleId: string, lessons: Lesson[]) => void;
-}
+import type { LessonListProps } from "../../types/instructor";
 
 const LessonList: React.FC<LessonListProps> = ({
   lessons,

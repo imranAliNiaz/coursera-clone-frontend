@@ -16,13 +16,11 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   const location = useLocation();
 
   if (!user) {
-    // If it's a student route (allowedRoles includes "student"), redirect to Home with auth trigger
     if (allowedRoles?.includes("student")) {
       return (
         <Navigate to="/?triggerAuth=login" state={{ from: location }} replace />
       );
     }
-    // Redirect to the specified login page (default /portal-login)
     return <Navigate to={loginPath} state={{ from: location }} replace />;
   }
 
@@ -38,8 +36,6 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
     );
 
     if (!hasRole) {
-      console.log("Role mismatch. Redirecting to login.");
-      // User is logged in but doesn't have the right role
       return <Navigate to={loginPath} replace />;
     }
   }

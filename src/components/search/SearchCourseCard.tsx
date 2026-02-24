@@ -25,7 +25,6 @@ const SearchCourseCard: React.FC<SearchCourseCardProps> = ({
       onClick={() => navigate(`/course/${id}`)}
       className="bg-white rounded-[4px] border border-border overflow-hidden hover:shadow-md transition-shadow cursor-pointer flex flex-col h-full font-sans group"
     >
-      {/* Image Section */}
       <div className="relative aspect-[16/9] w-full bg-surface overflow-hidden">
         <img
           src={image}
@@ -73,12 +72,10 @@ const SearchCourseCard: React.FC<SearchCourseCardProps> = ({
           </span>
         </div>
 
-        {/* Title */}
         <h3 className="text-[16px] font-bold text-text-primary mb-3 line-clamp-2 leading-[1.3] group-hover:text-primary transition-colors min-h-[42px]">
           {title}
         </h3>
 
-        {/* Skills */}
         <p className="text-[13px] text-text-secondary mb-4 line-clamp-2 leading-relaxed flex-1">
           <span className="font-bold text-text-primary">
             Skills you'll gain:{" "}
@@ -86,7 +83,6 @@ const SearchCourseCard: React.FC<SearchCourseCardProps> = ({
           {skills}
         </p>
 
-        {/* Degree Link (Optional) */}
         {hasDegreeLink && (
           <div className="flex items-center gap-2 mb-4">
             <svg
@@ -109,7 +105,6 @@ const SearchCourseCard: React.FC<SearchCourseCardProps> = ({
           </div>
         )}
 
-        {/* Rating & Metadata */}
         <div className="mt-auto">
           <div className="flex items-center gap-1.5 mb-2">
             <svg

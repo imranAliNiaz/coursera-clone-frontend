@@ -53,7 +53,6 @@ const CareerSkills: React.FC = () => {
       <div className="px-2 sm:px-4 md:px-6">
         <div className="bg-career-bg rounded-[16px] p-5 sm:p-6 md:p-8 lg:p-10 2xl:p-12">
           <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8 mb-6 md:mb-8">
-            {/* Left Header Area */}
             <div className="md:w-1/3 lg:w-1/4 flex flex-col items-start gap-2 md:gap-1 mt-2 sm:mt-4 md:mt-6 lg:mt-20">
               <h2 className="text-[24px] md:text-[26px] font-normal text-career-heading leading-tight font-sans">
                 Career skills that work
@@ -68,7 +67,6 @@ const CareerSkills: React.FC = () => {
               </div>
             </div>
 
-            {/* Cards Grid */}
             <div className="md:w-2/3 lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 lg:gap-5">
               {visibleCourses.map((course, index) => (
                 <div
@@ -109,7 +107,6 @@ const CareerSkills: React.FC = () => {
                 </div>
               ))}
 
-              {/* Mobile-only CTA */}
               <div className="w-full flex justify-center md:hidden mt-4">
                 <Button
                   variant="outline"

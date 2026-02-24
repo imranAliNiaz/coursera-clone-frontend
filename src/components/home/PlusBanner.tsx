@@ -5,7 +5,6 @@ const PlusBanner: React.FC = () => {
   return (
     <section className="bg-primary py-8 md:py-10 text-center">
       <div className="container mx-auto px-4">
-        {/* Logo Area */}
         <div className="flex items-center justify-center gap-0 mb-3">
           <span className="text-white text-[24px] md:text-[30px] font-normal tracking-[-0.02em] font-sans">
             coursera

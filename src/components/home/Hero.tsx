@@ -8,7 +8,6 @@ const Hero: React.FC = () => {
 
   return (
     <div className="flex flex-col font-sans">
-      {/* Promo Bar - Stays separate at top as per visual design */}
       {showPromo && (
         <div className="bg-blue-100 py-3 relative z-20">
           <div className="container mx-auto px-4 md:px-8 flex items-center justify-center text-[14px] md:text-[16px]">
@@ -44,15 +43,11 @@ const Hero: React.FC = () => {
         </div>
       )}
 
-      {/* Hero Content Section */}
       <div className="bg-hero-bg w-full overflow-hidden md:px-6">
         <div className="container mx-auto px-4 md:px-8">
           <div className="w-[6px] h-6 bg-primary mb-6 hidden md:block"></div>
           <div className="flex flex-col md:flex-row items-center pt-6 pb-0 md:py-16">
-            {/* Left side content */}
             <div className="w-full md:w-1/2 flex flex-col items-start pb-4 pr-0 md:pr-12 md:pb-12 order-2 md:order-1">
-              {/* Blue accent bar */}
-
               <h1 className="text-[36px] sm:text-[44px] md:text-[64px] leading-[1.05] font-normal text-text-primary mb-6 tracking-tight">
                 Achieve your career goals with Coursera Plus
               </h1>
@@ -82,7 +77,6 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* Right side image */}
             <div className="w-[120%] -mx-[10%] md:w-1/2 md:mx-0 order-1 md:order-2 mb-8 md:mb-0">
               <img
                 src={IMAGES.HERO2}

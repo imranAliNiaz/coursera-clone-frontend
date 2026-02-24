@@ -6,7 +6,6 @@ const portalApi = axios.create({
 });
 
 portalApi.interceptors.request.use((config) => {
-  // attach portal token if available
   const token = localStorage.getItem("portalToken");
   if (token && config.headers) config.headers.Authorization = `Bearer ${token}`;
   return config;

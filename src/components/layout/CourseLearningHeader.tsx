@@ -48,16 +48,13 @@ const CourseLearningHeader: React.FC = () => {
   return (
     <header className="bg-white border-b border-[#e1e1e1] h-[64px] flex items-center sticky top-0 z-50 font-sans shadow-[0_2px_4px_rgba(0,0,0,0.02)]">
       <div className="w-full px-4 flex items-center justify-between">
-        {/* ================= LEFT SECTION ================= */}
         <div className="flex items-center gap-4 shrink-0">
-          {/* 1. Grid Icon (9 dots) */}
           <button className="text-[#1f1f1f] p-2 rounded-md hover:bg-gray-100 transition-colors bg-transparent border-none cursor-pointer">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z" />
             </svg>
           </button>
 
-          {/* 2. Logo */}
           <Link to="/" className="flex items-center no-underline">
             <img
               src={IMAGES.LOGO}
@@ -66,16 +63,13 @@ const CourseLearningHeader: React.FC = () => {
             />
           </Link>
 
-          {/* 3. Vertical Separator */}
           <div className="h-[32px] w-[1px] bg-[#dadce0] mx-0"></div>
 
-          {/* 4. Partner Icon (Dark Blue 'P') */}
           <div className="w-10 h-10 rounded-full bg-[#00255d] flex items-center justify-center text-white font-bold text-[18px]">
             P
           </div>
         </div>
 
-        {/* ================= CENTER SECTION ================= */}
         <div className="hidden md:flex flex-1 max-w-[680px] justify-start ml-6 mr-6">
           <form
             onSubmit={handleOverlaySearch}
@@ -136,9 +130,7 @@ const CourseLearningHeader: React.FC = () => {
           </form>
         </div>
 
-        {/* ================= RIGHT SECTION ================= */}
         <div className="flex items-center gap-4 shrink-0">
-          {/* Globe Icon */}
           <button className="text-text-secondary hover:text-text-primary bg-transparent border-none cursor-pointer p-1">
             <svg
               width="24"
@@ -158,14 +150,12 @@ const CourseLearningHeader: React.FC = () => {
 
           <NotificationsBell />
 
-          {/* Smile/Face Icon Placeholder (from screenshot) */}
           <img
             src={IMAGES.UI.CARTOON_ICON}
             alt="Cartoon"
             className="w-8 h-8 rounded-3xl object-contain cursor-pointer"
           />
 
-          {/* Profile Circle */}
           <div className="relative">
             <button
               onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}

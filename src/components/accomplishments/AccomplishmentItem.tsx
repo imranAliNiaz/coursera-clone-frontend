@@ -1,21 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import type { AccomplishmentItemProps } from "../../types/student";
 
-interface Props {
-  accomplishment: {
-    id: string;
-    title: string;
-    type: string;
-    image: string;
-    grade?: string;
-  };
-}
-
-const AccomplishmentItem: React.FC<Props> = ({ accomplishment }) => {
+const AccomplishmentItem: React.FC<AccomplishmentItemProps> = ({
+  accomplishment,
+}) => {
   const navigate = useNavigate();
   return (
     <div className="flex flex-col md:flex-row items-start md:items-center gap-4 py-8 border-b border-border last:border-0 hover:bg-gray-50 transition-colors px-4 -mx-4 rounded-lg">
-      {/* Icon/Image */}
       <div className="w-[72px] h-[72px] shrink-0 border border-border rounded-[4px] bg-white p-1">
         <img
           src={accomplishment.image}
@@ -24,7 +16,6 @@ const AccomplishmentItem: React.FC<Props> = ({ accomplishment }) => {
         />
       </div>
 
-      {/* Content */}
       <div className="flex-1 min-w-0">
         <h3 className="text-[16px] font-bold text-[#1f1f1f] mb-1 leading-snug hover:underline cursor-pointer">
           {accomplishment.title}
@@ -42,7 +33,6 @@ const AccomplishmentItem: React.FC<Props> = ({ accomplishment }) => {
         </div>
       </div>
 
-      {/* Action */}
       <div className="shrink-0 w-full md:w-auto">
         <button
           onClick={() =>

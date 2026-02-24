@@ -9,11 +9,8 @@ const ValueProps: React.FC = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {/* Feature 1 */}
           <div className="flex flex-col gap-4">
-            {/* Icon Placeholder - User to replace */}
             <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-lg mb-2">
-              {/* Replace this SVG with your manually added icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -38,9 +35,7 @@ const ValueProps: React.FC = () => {
             </p>
           </div>
 
-          {/* Feature 2 */}
           <div className="flex flex-col gap-4">
-            {/* Icon Placeholder */}
             <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-lg mb-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,9 +64,7 @@ const ValueProps: React.FC = () => {
             </p>
           </div>
 
-          {/* Feature 3 */}
           <div className="flex flex-col gap-4">
-            {/* Icon Placeholder */}
             <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-lg mb-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

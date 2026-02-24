@@ -9,7 +9,6 @@ const BillingInfo: React.FC<BillingInfoProps> = ({ name }) => {
       </h2>
 
       <div className="flex flex-col gap-6">
-        {/* Name Field */}
         <div>
           <label className="block text-[12px] leading-[16px] font-bold text-text-primary uppercase tracking-wider mb-2">
             NAME
@@ -21,7 +20,6 @@ const BillingInfo: React.FC<BillingInfoProps> = ({ name }) => {
           />
         </div>
 
-        {/* Country Field */}
         <div>
           <label className="block text-[12px] leading-[16px] font-bold text-text-primary uppercase tracking-wider mb-2">
             COUNTRY
@@ -31,7 +29,6 @@ const BillingInfo: React.FC<BillingInfoProps> = ({ name }) => {
               <option>Select your country</option>
               <option>United States</option>
               <option>Pakistan</option>
-              {/* Add more countries as needed */}
             </select>
             <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
               <svg

@@ -2,8 +2,6 @@ import React from "react";
 import Button from "../common/Button";
 
 const Pricing: React.FC = () => {
-  // const [isAnnual, setIsAnnual] = useState(false); // Toggle state placeholder
-
   const CheckIcon = () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +22,6 @@ const Pricing: React.FC = () => {
   return (
     <section className="bg-surface py-16 font-sans">
       <div className="container mx-auto px-4 md:px-8">
-        {/* Header & Toggle */}
         <div className="text-center mb-12">
           <h2 className="text-[28px] md:text-[32px] font-semibold text-text-primary mb-8">
             Plans for you or your team
@@ -40,9 +37,7 @@ const Pricing: React.FC = () => {
           </div>
         </div>
 
-        {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 max-w-6xl mx-auto items-start">
-          {/* Card 1: Single Learning Program */}
           <div className="bg-white p-8 border border-gray-200 rounded-lg md:rounded-r-none md:rounded-l-lg md:border-r-0 h-full flex flex-col relative z-0 md:mt-8 shadow-sm md:shadow-none">
             <h3 className="text-[20px] font-semibold text-text-primary mb-2">
               Single learning program
@@ -59,7 +54,6 @@ const Pricing: React.FC = () => {
                 <span className="text-xs text-text-secondary line-through italic ml-2">
                   /month
                 </span>
-                {/* Note: Screenshot text implies price/month but "$20 - $20" looks like a range. Transcribing exactly. Actually looks like "$49 - $79" usually, but user image has "$20 - $20". I will strictly follow image.*/}
               </div>
             </div>
 
@@ -83,7 +77,6 @@ const Pricing: React.FC = () => {
             </ul>
           </div>
 
-          {/* Card 2: Coursera Plus Monthly (Highlighted) */}
           <div className="bg-white border-2 border-primary rounded-lg shadow-xl relative z-10 overflow-hidden md:-my-6 flex flex-col h-full transform md:scale-105">
             <div className="bg-primary text-white text-center text-xs font-bold py-2 uppercase tracking-wide">
               Most popular
@@ -147,7 +140,6 @@ const Pricing: React.FC = () => {
             </div>
           </div>
 
-          {/* Card 3: Coursera Plus Annual */}
           <div className="bg-white p-8 border border-gray-200 rounded-lg md:rounded-l-none md:rounded-r-lg md:border-l-0 h-full flex flex-col relative z-0 md:mt-8 shadow-sm md:shadow-none">
             <h3 className="text-[20px] font-semibold text-text-primary mb-2">
               Coursera Plus Annual

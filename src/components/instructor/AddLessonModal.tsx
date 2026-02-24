@@ -1,15 +1,5 @@
 import React, { useState } from "react";
-
-interface AddLessonModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  onNext: (
-    title: string,
-    type: "VIDEO" | "READING" | "ASSESSMENT",
-    description?: string,
-  ) => void;
-  // moduleId removed as unused
-}
+import type { AddLessonModalProps } from "../../types/instructor";
 
 const AddLessonModal: React.FC<AddLessonModalProps> = ({
   isOpen,

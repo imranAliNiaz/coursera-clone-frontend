@@ -5,7 +5,6 @@ import type { OrderSummaryProps } from "../../types/ui/checkout.types";
 const OrderSummary: React.FC<OrderSummaryProps> = ({ course }) => {
   return (
     <div className="flex flex-col gap-6">
-      {/* Course Card */}
       <div className="border border-checkout-border-card rounded-[8px] p-6 bg-white shadow-soft">
         <div className="flex flex-col sm:flex-row gap-4 mb-4">
           <div className="w-[64px] h-[64px] shrink-0 border border-checkout-border-card p-1 rounded-[4px] flex items-center justify-center">
@@ -97,7 +96,6 @@ const OrderSummary: React.FC<OrderSummaryProps> = ({ course }) => {
         </div>
       </div>
 
-      {/* Stats (Learners, Courses) */}
       <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 py-4 opacity-70 grayscale">
         <div className="flex items-center gap-2">
           <img

@@ -13,7 +13,6 @@ const CourseHero: React.FC<CourseHeroProps> = ({ course }) => {
     <section className="bg-career-bg relative overflow-hidden pt-10 sm:pt-14 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 border-b border-gray-100 px-4 md:px-0">
       <div className="max-w-[1200px] 2xl:max-w-[1360px] grid grid-cols-1 lg:grid-cols-2 items-center px-4 sm:px-6 md:px-8 lg:px-10 2xl:px-12 mx-auto">
         <div className="z-10">
-          {/* Logo */}
           <div className="mb-6 flex items-center">
             <img
               src={IMAGES.LOGOS.GOOGLE_WORDMARK}
@@ -22,7 +21,6 @@ const CourseHero: React.FC<CourseHeroProps> = ({ course }) => {
             />
           </div>
 
-          {/* Title */}
           <h1 className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-normal text-course-hero-heading leading-[1.1] mb-4 sm:mb-6 tracking-tight">
             {course.title}
           </h1>
@@ -59,10 +57,8 @@ const CourseHero: React.FC<CourseHeroProps> = ({ course }) => {
           </p>
         </div>
 
-        {/* Hero Image / Illustration Placeholder */}
         <div className="hidden lg:flex justify-end pr-6 xl:pr-8">
           <div className="relative w-[360px] h-[280px] xl:w-[450px] xl:h-[350px]">
-            {/* Abstract shapes from design */}
             <div className="absolute top-0 right-0 w-full h-full bg-skeleton-alt rounded-[24px] rotate-3 opacity-40"></div>
             <div className="absolute top-0 right-0 w-full h-full border border-blue-100 rounded-[24px] -rotate-2"></div>
             <div className="absolute inset-0 flex items-center justify-center p-12">
@@ -83,7 +79,6 @@ const CourseHero: React.FC<CourseHeroProps> = ({ course }) => {
         </div>
       </div>
 
-      {/* Decorative dots/shapes */}
       <div className="absolute bottom-0 right-0 p-8 opacity-20 hidden lg:block">
         <div className="grid grid-cols-4 gap-4">
           {[...Array(12)].map((_, i) => (

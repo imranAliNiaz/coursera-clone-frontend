@@ -121,3 +121,91 @@ export interface ChartPoint {
   date: string;
   value: number;
 }
+
+export interface AddLessonModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onNext: (
+    title: string,
+    type: "VIDEO" | "READING" | "ASSESSMENT",
+    description?: string,
+  ) => void;
+}
+
+export interface EditLessonModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onSave: (payload: {
+    id?: string;
+    title: string;
+    description?: string;
+    content?: string;
+    videoUrl?: string;
+    duration?: number | null;
+  }) => void;
+  lesson: {
+    id?: string;
+    title: string;
+    type: "VIDEO" | "READING" | "ASSESSMENT";
+    description?: string;
+    content?: string;
+    videoUrl?: string;
+    duration?: number | null;
+  } | null;
+  mode?: "edit" | "create";
+}
+
+export interface AssessmentQuestion {
+  id: string;
+  question: string;
+  options: string[];
+  correctAnswerIndex: number;
+}
+
+export interface AssessmentContent {
+  title: string;
+  passingScore: number;
+  questions: AssessmentQuestion[];
+  instructions?: string;
+}
+
+export interface Lesson {
+  id: string;
+  title: string;
+  type: "VIDEO" | "READING" | "ASSESSMENT";
+  order: number;
+  updatedAt?: string;
+}
+
+export interface LessonListProps {
+  lessons: Lesson[];
+  moduleId: string;
+  onEdit: (lesson: Lesson) => void;
+  onDelete: (lessonId: string) => void;
+  onReorder: (moduleId: string, lessons: Lesson[]) => void;
+}
+
+export interface Lesson {
+  id: string;
+  title: string;
+  type: "VIDEO" | "READING" | "ASSESSMENT";
+  order: number;
+  updatedAt?: string;
+}
+
+export interface Module {
+  id: string;
+  title: string;
+  order: number;
+  lessons: Lesson[];
+}
+
+export interface ModuleListProps {
+  modules: Module[];
+  onEditModule: (module: Module) => void;
+  onDeleteModule: (moduleId: string) => void;
+  onAddLesson: (moduleId: string) => void;
+  onEditLesson: (lesson: Lesson) => void;
+  onDeleteLesson: (lessonId: string) => void;
+  onReorderLessons: (moduleId: string, lessons: Lesson[]) => void;
+}

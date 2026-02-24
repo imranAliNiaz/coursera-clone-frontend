@@ -7,7 +7,7 @@ interface UpdateItem {
   title: string;
   message: string;
   time: string;
-  image?: string; // URL or placeholder
+  image?: string;
   isRead: boolean;
   link: string;
 }
@@ -86,7 +86,6 @@ const UpdatesPopover: React.FC = () => {
               className="block px-4 py-3 hover:bg-surface transition-colors border-b border-gray-50 last:border-0 no-underline group"
             >
               <div className="flex gap-3">
-                {/* Icon/Image */}
                 <div className="shrink-0 mt-1">
                   {item.image ? (
                     <img
@@ -108,7 +107,6 @@ const UpdatesPopover: React.FC = () => {
                   )}
                 </div>
 
-                {/* Content */}
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
                     <span className="text-[14px] leading-tight font-semibold text-[#1f1f1f] group-hover:text-[#0056D2] mb-1 line-clamp-1">

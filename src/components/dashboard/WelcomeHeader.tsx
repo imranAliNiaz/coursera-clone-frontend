@@ -8,7 +8,6 @@ const WelcomeHeader: React.FC = () => {
 
   return (
     <div className="flex flex-col">
-      {/* Welcome text */}
       <div className="mb-2">
         <div className="text-[38px] font-normal text-dashboard-heading leading-[1.1]">
           Welcome,
@@ -18,19 +17,15 @@ const WelcomeHeader: React.FC = () => {
         </div>
       </div>
 
-      {/* Button */}
       <button className="w-full border border-primary text-primary px-4 py-[10px] rounded-[6px] font-medium text-[14px] hover:bg-surface-hover transition-colors mb-8 bg-white">
         Add career goals
       </button>
-
-      {/* Weekly activity (NO CARD BORDER) */}
       <div>
         <div className="flex justify-between items-center mb-3">
           <div className="text-[12px] uppercase tracking-wide text-text-secondary font-semibold">
             Weekly activity
           </div>
 
-          {/* Edit icon */}
           <button className="text-text-secondary hover:text-text-primary">
             <svg
               width="14"
@@ -57,7 +52,6 @@ const WelcomeHeader: React.FC = () => {
           </div>
         </div>
 
-        {/* Days row */}
         <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:justify-between mb-4">
           {["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"].map((day) => (
             <div
@@ -88,7 +82,6 @@ const WelcomeHeader: React.FC = () => {
           ))}
         </div>
 
-        {/* Footer text */}
         <div className="text-[13px] text-text-secondary">
           40 items completed · 66 minutes learned
         </div>

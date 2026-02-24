@@ -1,17 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-export interface UpdateCardProps {
-  id: number;
-  type: "certificate" | "welcome" | "general" | "announcement";
-  title: string;
-  message: string;
-  time: string;
-  image?: string;
-  isRead: boolean;
-  link: string;
-  actionText?: string;
-}
+import type { UpdateCardProps } from "../../types/student";
 
 const UpdateCard: React.FC<UpdateCardProps> = ({
   type,
@@ -30,7 +19,6 @@ const UpdateCard: React.FC<UpdateCardProps> = ({
       }`}
     >
       <div className="shrink-0">
-        {/* Icon Logic */}
         {image ? (
           <img
             src={image}

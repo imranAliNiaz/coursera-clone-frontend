@@ -53,9 +53,7 @@ const LoggedHeader: React.FC = () => {
     <>
       <header className="bg-white border-b border-border h-[64px] flex items-center sticky top-0 z-50 font-sans">
         <div className="w-full px-4 md:px-8 flex items-center justify-between">
-          {/* ================= LEFT SECTION ================= */}
           <div className="flex items-center gap-4 shrink-0">
-            {/* 1. Grid Icon (Dots) */}
             <button className="text-text-primary hover:bg-gray-50 p-2 rounded-md transition-colors hidden md:block border-none bg-transparent cursor-pointer">
               <svg
                 width="18"
@@ -75,7 +73,6 @@ const LoggedHeader: React.FC = () => {
               </svg>
             </button>
 
-            {/* 2. Logo Logic */}
             <Link to="/" className="no-underline shrink-0">
               {isUpdatesPage ? (
                 <img src={IMAGES.LOGO} alt="Coursera" className="h-[24px]" />
@@ -86,7 +83,6 @@ const LoggedHeader: React.FC = () => {
               )}
             </Link>
 
-            {/* 3. Explore & My Learning */}
             <div className="hidden md:flex items-center gap-6">
               <button
                 type="button"
@@ -120,13 +116,11 @@ const LoggedHeader: React.FC = () => {
             </div>
           </div>
 
-          {/* ================= CENTER SECTION: SEARCH BAR ================= */}
           <div className="hidden lg:flex flex-1 justify-center px-6">
             <form
               onSubmit={handleOverlaySearch}
               className="w-full max-w-[520px] relative flex items-center h-[44px] bg-white border border-profile-input-border rounded-full overflow-visible"
             >
-              {/* Left Branding "C" Circle */}
               <div
                 className="ml-[4px] w-[36px] h-[36px] min-w-[36px] rounded-full flex items-center justify-center text-white font-sans font-bold text-[17px] z-10 pointer-events-none"
                 style={{ backgroundColor: "var(--color-brand-blue)" }}
@@ -145,7 +139,6 @@ const LoggedHeader: React.FC = () => {
                 className="flex-1 h-full bg-transparent border-none px-3 text-[14px] text-text-primary placeholder:text-text-muted focus:outline-none"
               />
 
-              {/* Right Search Button */}
               {searchQuery && (
                 <button
                   type="button"
@@ -204,9 +197,7 @@ const LoggedHeader: React.FC = () => {
             </form>
           </div>
 
-          {/* ================= RIGHT SECTION: GLOBE, D, PROFILE ================= */}
           <div className="flex items-center gap-5 shrink-0">
-            {/* Cart Icon (Updates Page Only) */}
             {isUpdatesPage && (
               <button className="text-text-muted hover:text-primary p-1 hidden md:block transition-colors bg-transparent border-none cursor-pointer relative">
                 <svg
@@ -223,13 +214,11 @@ const LoggedHeader: React.FC = () => {
                   <circle cx="20" cy="21" r="1"></circle>
                   <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                 </svg>
-                {/* Cart Badge */}
                 <span className="absolute -top-1 -right-1 h-4 w-4 bg-error text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white">
                   1
                 </span>
               </button>
             )}
-            {/* Globe Icon */}
             <button className="text-text-muted hover:text-primary p-1 hidden md:block transition-colors bg-transparent border-none cursor-pointer">
               <svg
                 width="22"
@@ -247,10 +236,8 @@ const LoggedHeader: React.FC = () => {
               </svg>
             </button>
 
-            {/* Updates Bell Icon */}
             <NotificationsBell />
 
-            {/* Profile Avatar */}
             <div className="relative">
               <button
                 onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}

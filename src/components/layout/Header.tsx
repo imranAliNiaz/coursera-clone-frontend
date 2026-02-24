@@ -9,12 +9,9 @@ const Header: React.FC = () => {
   const location = useLocation();
   const pathname = location.pathname;
 
-  // Render HomeMainHeader only on the root path
   if (pathname === "/") {
     return <HomeMainHeader />;
   }
-
-  // Render ProfileHeader for account settings, profile, and certificates
   if (
     pathname.startsWith("/account") ||
     pathname.startsWith("/profile") ||
@@ -23,12 +20,9 @@ const Header: React.FC = () => {
     return <ProfileHeader />;
   }
 
-  // Render CourseLearningHeader for learning pages
   if (pathname.startsWith("/learn")) {
     return <CourseLearningHeader />;
   }
-
-  // Default to LoggedHeader for all other routes (dashboard, search, courses, etc.)
   return <LoggedHeader />;
 };
 

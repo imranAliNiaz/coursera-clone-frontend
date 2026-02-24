@@ -585,3 +585,55 @@ export interface StudentCheckoutState {
   error: string | null;
   currentCourseId: string | null;
 }
+
+export interface AccomplishmentItemProps {
+  accomplishment: {
+    id: string;
+    title: string;
+    type: string;
+    image: string;
+    grade?: string;
+  };
+}
+
+export interface PageHeaderProps {
+  title: string;
+}
+
+export interface RegisterModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onSwitchToLogin: () => void;
+}
+
+export interface UpdateCardProps {
+  id: number;
+  type: "certificate" | "welcome" | "general" | "announcement";
+  title: string;
+  message: string;
+  time: string;
+  image?: string;
+  isRead: boolean;
+  link: string;
+  actionText?: string;
+}
+
+export interface Question {
+  id: string;
+  question: string;
+  options: string[];
+  correctAnswerIndex: number;
+}
+
+export interface AssessmentData {
+  title: string;
+  instructions: string;
+  questions: Question[];
+  passingScore: number;
+}
+
+export interface FilterOption {
+  label: string;
+  value: string;
+  count?: number;
+}

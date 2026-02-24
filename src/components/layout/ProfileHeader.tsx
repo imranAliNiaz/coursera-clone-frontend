@@ -35,7 +35,6 @@ const ProfileHeader: React.FC = () => {
   return (
     <header className="bg-white border-b border-border h-[64px] flex items-center sticky top-0 z-50 font-sans">
       <div className="w-full px-4 md:px-8 flex items-center justify-between">
-        {/* Left Section */}
         <div className="flex items-center gap-4 shrink-0">
           <button className="text-text-primary hover:bg-gray-50 p-2 rounded-md transition-colors border-none bg-transparent cursor-pointer">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -57,7 +56,6 @@ const ProfileHeader: React.FC = () => {
           </Link>
         </div>
 
-        {/* Center Search Bar */}
         <div className="flex-1 max-w-[620px] mx-10 hidden md:block">
           <form
             onSubmit={(e) => handleSearch(e)}
@@ -134,9 +132,7 @@ const ProfileHeader: React.FC = () => {
           </form>
         </div>
 
-        {/* Right Section */}
         <div className="flex items-center gap-6 shrink-0 mr-2">
-          {/* Globe Icon */}
           <button className="text-text-muted hover:text-primary transition-colors bg-transparent border-none cursor-pointer p-1">
             <svg
               width="22"

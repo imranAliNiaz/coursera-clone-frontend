@@ -1,43 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { toast } from "react-hot-toast";
 import api from "../../services/apiClient";
-
-interface EditLessonModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  onSave: (payload: {
-    id?: string;
-    title: string;
-    description?: string;
-    content?: string;
-    videoUrl?: string;
-    duration?: number | null;
-  }) => void;
-  lesson: {
-    id?: string;
-    title: string;
-    type: "VIDEO" | "READING" | "ASSESSMENT";
-    description?: string;
-    content?: string;
-    videoUrl?: string;
-    duration?: number | null;
-  } | null;
-  mode?: "edit" | "create";
-}
-
-interface AssessmentQuestion {
-  id: string;
-  question: string;
-  options: string[];
-  correctAnswerIndex: number;
-}
-
-interface AssessmentContent {
-  title: string;
-  passingScore: number;
-  questions: AssessmentQuestion[];
-  instructions?: string;
-}
+import type {
+  EditLessonModalProps,
+  AssessmentContent,
+} from "../../types/instructor";
 
 const EditLessonModal: React.FC<EditLessonModalProps> = ({
   isOpen,
