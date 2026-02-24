@@ -46,36 +46,38 @@ const AppRoutes: React.FC = () => (
       <Route path="/" element={<Home />} />
       <Route path="/search" element={<SearchResults />} />
       <Route path="/course/:id" element={<CourseDetails />} />
-      <Route path="/learn/:courseId" element={<CourseLearning />} />
-      <Route
-        path="/learn/:courseId/lecture/:lessonId"
-        element={<CourseContent />}
-      />
-      <Route
-        path="/learn/:courseId/assessment/:assessmentId"
-        element={<CourseAssessment />}
-      />
-      <Route
-        path="/learn/:courseId/assessment/:assessmentId/result"
-        element={<CourseAssessmentResult />}
-      />
-      <Route path="/accomplishments" element={<Accomplishments />} />
-      <Route path="/verify/:code" element={<CertificateVerify />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/profile" element={<Profile />} />
+      {/* Protected Student Routes */}
       <Route
         element={
           <ProtectedRoute allowedRoles={["student"]} loginPath="/login" />
         }
       >
+        <Route path="/learn/:courseId" element={<CourseLearning />} />
+        <Route
+          path="/learn/:courseId/lecture/:lessonId"
+          element={<CourseContent />}
+        />
+        <Route
+          path="/learn/:courseId/assessment/:assessmentId"
+          element={<CourseAssessment />}
+        />
+        <Route
+          path="/learn/:courseId/assessment/:assessmentId/result"
+          element={<CourseAssessmentResult />}
+        />
+        <Route path="/accomplishments" element={<Accomplishments />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/account/settings" element={<AccountSettings />} />
+        <Route path="/updates" element={<UpdatesPage />} />
+        <Route path="/my-learning" element={<MyLearning />} />
+        <Route path="/checkout/:courseId" element={<Checkout />} />
+        <Route
+          path="/accomplishments/certificate/:id"
+          element={<CourseCertificate />}
+        />
+        <Route path="/verify/:code" element={<CertificateVerify />} />
       </Route>
-      <Route
-        path="/accomplishments/certificate/:id"
-        element={<CourseCertificate />}
-      />
-      <Route path="/updates" element={<UpdatesPage />} />
-      <Route path="/my-learning" element={<MyLearning />} />
 
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
@@ -88,7 +90,6 @@ const AppRoutes: React.FC = () => (
         path="/instructor-login"
         element={<AdminInstructorLogin expectedRole="instructor" />}
       />
-      <Route path="/checkout/:courseId" element={<Checkout />} />
 
       <Route
         element={<InstructorProtectedRoute loginPath="/instructor-login" />}

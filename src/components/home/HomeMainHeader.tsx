@@ -54,6 +54,25 @@ const Header: React.FC = () => {
   }, []);
 
   useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const triggerAuth =
+      searchParams.get("triggerAuth") || searchParams.get("auth");
+
+    if (triggerAuth === "login") {
+      setAuthMode("login");
+      setIsAuthModalOpen(true);
+      // Clean up the URL to prevent re-opening on refresh
+      const newUrl = window.location.pathname;
+      window.history.replaceState({ path: newUrl }, "", newUrl);
+    } else if (triggerAuth === "signup") {
+      setAuthMode("signup");
+      setIsAuthModalOpen(true);
+      const newUrl = window.location.pathname;
+      window.history.replaceState({ path: newUrl }, "", newUrl);
+    }
+  }, [navigate]);
+
+  useEffect(() => {
     if (searchQuery.trim().length < 2) {
       setResults([]);
       return;

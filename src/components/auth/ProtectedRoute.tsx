@@ -16,7 +16,13 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   const location = useLocation();
 
   if (!user) {
-    // Redirect to the specified login page
+    // If it's a student route (allowedRoles includes "student"), redirect to Home with auth trigger
+    if (allowedRoles?.includes("student")) {
+      return (
+        <Navigate to="/?triggerAuth=login" state={{ from: location }} replace />
+      );
+    }
+    // Redirect to the specified login page (default /portal-login)
     return <Navigate to={loginPath} state={{ from: location }} replace />;
   }
 

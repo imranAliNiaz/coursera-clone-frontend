@@ -33,7 +33,9 @@ const useCourseEnrollment = (
 
   const handleEnrollClick = () => {
     if (!user) {
-      navigate("/login", { state: { from: `/course/${courseId}` } });
+      navigate("/?triggerAuth=login", {
+        state: { from: `/course/${courseId}` },
+      });
       return;
     }
 
