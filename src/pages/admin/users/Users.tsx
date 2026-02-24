@@ -180,9 +180,9 @@ const Users: React.FC = () => {
                     </td>
                     <td className="px-6 py-4 text-xs text-text-secondary">
                       <div className="flex flex-col gap-1">
-                        <span>{user._count.enrollments} Enrollments</span>
+                        <span>{user._count?.enrollments || 0} Enrollments</span>
                         {user.role !== "student" && (
-                          <span>{user._count.courses} Courses</span>
+                          <span>{user._count?.courses || 0} Courses</span>
                         )}
                       </div>
                     </td>

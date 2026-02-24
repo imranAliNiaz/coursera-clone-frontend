@@ -100,12 +100,12 @@ const Instructors: React.FC = () => {
                     </td>
                     <td className="px-6 py-4">
                       <span className="text-sm font-medium text-text-primary">
-                        {instructor._count.courses}
+                        {instructor._count?.courses || 0}
                       </span>
                     </td>
                     <td className="px-6 py-4">
                       <span className="text-sm font-medium text-text-secondary">
-                        {instructor._count.enrollments.toLocaleString()}
+                        {(instructor._count?.enrollments || 0).toLocaleString()}
                       </span>
                     </td>
                     <td className="px-6 py-4 text-right">
